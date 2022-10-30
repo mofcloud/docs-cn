@@ -1,0 +1,56 @@
+site_name: Mof
+site_url: https://docs.mofcloud.cn
+repo_name: mofcloud/docs
+repo_url: https://github.com/mofcloud/docs
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tracking
+    - navigation.top
+    - navigation.tabs
+
+plugins:
+  - glightbox
+  - search
+  - i18n:
+      default_language: zh
+      languages:
+#        en:
+#          name: English
+#          build: true
+        zh:
+          name: 简体中文
+          build: true
+      nav_translations:
+        zh:
+          Overview: 概览
+
+markdown_extensions:
+  - attr_list
+  - toc:
+      permalink: "#"
+  - admonition
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+nav:
+  - '概览': 'index.md'
+  - '产品文档': 'product-docs/index.md'
+  - '云产品手册': 'cloud-handbook/index.md'
+  - 'FinOps 知识库': 'finops/index.md'
+  - '云优化最佳实践': 'best-practice/index.md'
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Copyright &copy; 2022 mofcloud
