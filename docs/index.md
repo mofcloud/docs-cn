@@ -22,11 +22,11 @@ Mof 是一个基于 FinOps理念的 SaaS平台。
 ### 云产品价格浏览器
 即将上线，敬请期待。
 
-### [云成本手册](cloud-handbook)
+### [云成本手册](cloud-wiki)
 云成本手册是一套免费的指南。使用易于理解的术语解释云厂商复杂定价逻辑。
 本指南托管在 Github 上，任何人都可以向社区贡献他们的知识。
 
-### [FinOps 知识库](finops)
+### [FinOps 知识库](finops-wiki)
 FinOps 知识库会用易于理解的例子和概念解释，为云从业者提供 FinOps 相关的知识。
 
 ### [云优化最佳实践](best-practice)

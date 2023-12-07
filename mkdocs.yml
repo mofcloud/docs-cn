@@ -1,5 +1,5 @@
 site_name: Mof
-site_url: https://docs.mofcloud.cn
+site_url: https://docs.mofcloud.com
 repo_name: mofcloud/docs
 repo_url: https://github.com/mofcloud/docs
 
@@ -15,17 +15,22 @@ plugins:
   - glightbox
   - search
   - i18n:
-      default_language: zh
+      default_language: c
       languages:
-#        en:
-#          name: English
-#          build: true
-        zh:
+        - locale: en
+          name: English
+          build: true
+          default: true
+        - locale: zh
           name: 简体中文
           build: true
-      nav_translations:
-        zh:
-          Overview: 概览
+          nav_translations:
+            Introduction: 产品介绍
+            Docs: 使用文档
+            Cloud Wiki: 云百科
+            FinOps Wiki: FinOps 百科
+            Best practice: 最佳实践
+            Contact: 联系我们
 
 markdown_extensions:
   - attr_list
@@ -39,18 +44,19 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
 
 
 nav:
-  - '概览': 'index.md'
-  - '产品文档': 'product-docs/index.md'
-  - '云产品手册': 'cloud-handbook/index.md'
-  - 'FinOps 知识库': 'finops/index.md'
-  - '云优化最佳实践': 'best-practice/index.md'
+  - 'Introduction': 'index.md'
+  - 'Docs': 'product-docs/index.md'
+  - 'Cloud Wiki': 'cloud-wiki/index.md'
+  - 'FinOps Wiki': 'finops-wiki/index.md'
+  - 'Best practice': 'best-practice/index.md'
+  - 'Contact': 'contact/index.md'
 
 extra_css:
   - stylesheets/extra.css
 
-copyright: Copyright &copy; 2022 mofcloud
+copyright: Copyright &copy; 2024 mofcloud
