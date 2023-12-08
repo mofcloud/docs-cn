@@ -1,3 +1,5 @@
+![Image title](img/mof-arch-zh.png)
+
 Mof 是一款 **FinOps 云成本数据分析平台**，帮助用户分析，管理，优化云开销和云技术架构。
 系统自动收集用户在各大云平台上的成本，利用率，使用量，标签，资源架构等数据，为用户分析评估云成本使用情况，并给出优化建议。
 
@@ -17,7 +19,7 @@ Mof 会持续覆盖主流的云服务商，让用户从云计算中获得最大�
 
     提供只读权限的密钥，自动收集数据，得出分析结果
 
-    [:octicons-arrow-right-24: 开始使用](#)
+    [:octicons-arrow-right-24: 开始使用](getting-started/index.md)
 
 -   :fontawesome-solid-comments-dollar:{ .lg .middle } __智能账单__
 
@@ -49,7 +51,7 @@ Mof 会持续覆盖主流的云服务商，让用户从云计算中获得最大�
 
     支持海内外主流云厂商，涵盖 IAAS，PAAS，SAAS
 
-    [:octicons-arrow-right-24: 组织架构账单](#)
+    [:octicons-arrow-right-24: 多云](#)
 
 -   :fontawesome-solid-arrow-right-arrow-left:{ .lg .middle } __汇率中心__
 
