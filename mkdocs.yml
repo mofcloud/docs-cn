@@ -10,6 +10,7 @@ theme:
     - navigation.tracking
     - navigation.top
     - navigation.tabs
+    - content.code.copy
 
 plugins:
   - glightbox
@@ -50,7 +51,13 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 nav:
   - 'Introduction': 'index.md'

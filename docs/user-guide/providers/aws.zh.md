@@ -28,6 +28,52 @@ Mof 只需要可读权限，如果权限不全，会导致数据收集不全，�
 Mof 需要如下的**可读权限**
 ![img.png](img/aws-cred-per.zh.png)
 
+### 密钥权限
+复制如下策略为 AWS 用户赋予权限。
+
+![img.png](img/aws-policy.png)
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "sts:GetCallerIdentity",
+                "iam:ListAttachedUserPolicies",
+                "iam:GetPolicy",
+                "iam:GetPolicyVersion",
+                "ec2:DescribeInstances",
+                "ec2:DescribeAddresses",
+                "lambda:ListFunctions",
+                "dynamodb:ListTables",
+                "cloudwatch:GetMetricData",
+                "elasticloadbalancing:DescribeTags",
+                "dynamodb:ListTagsOfResource",
+                "ce:GetCostAndUsage",
+                "s3:ListBucket",
+                "ec2:DescribeNatGateways",
+                "elasticloadbalancing:DescribeLoadBalancers",
+                "s3:GetObject",
+                "rds:ListTagsForResource",
+                "lambda:ListTags",
+                "dynamodb:DescribeTable",
+                "ce:GetDimensionValues",
+                "ec2:DescribeVolumes",
+                "rds:DescribeDBInstances",
+                "rds:DescribeDBClusters",
+                "ce:GetTags",
+                "cur:DescribeReportDefinitions",
+                "sts:GetCallerIdentity"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
 ### 默认统计维度（可修改）
 系统收集所有纬度的数据，默认纬度用于统计所有云厂商的成本，不影响数据准确性
 
