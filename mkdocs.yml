@@ -48,6 +48,15 @@ plugins:
             ECloudValley(enterprise): ECloudValley(私有版)
             MeshCloud(enterprise): 脉时云(私有版)
             CustomCloud: 自定义云
+            Smart bill: 智能账单
+            Smart monthly bill: 智能月账单
+            Monthly bill: 月账单
+            Bill history: 历史账单
+            Download bill: 下载账单
+            Organization: 组织架构
+            Sync: 数据同步
+            Exchange Rate: 汇率中心
+
 
 markdown_extensions:
   - attr_list
@@ -93,8 +102,14 @@ nav:
           - 'CustomCloud': 'user-guide/providers/custom.md'
           - 'ECloudValley(enterprise)': 'user-guide/providers/ev.md'
           - 'MeshCloud(enterprise)': 'user-guide/providers/mesh.md'
-
-
+      - 'Smart bill':
+          - 'Smart monthly bill': 'user-guide/bills/smart.md'
+          - 'Monthly bill': 'user-guide/bills/monthly.md'
+          - 'Bill history': 'user-guide/bills/history.md'
+          - 'Download bill': 'user-guide/bills/download.md'
+      - 'Organization': 'user-guide/org/index.md'
+      - 'Sync': 'user-guide/sync/index.md'
+      - 'Exchange Rate': 'user-guide/exchange/index.md'
   - 'Cloud Wiki': 'cloud-wiki/index.md'
   - 'FinOps Wiki': 'finops-wiki/index.md'
   - 'Best practice': 'best-practice/index.md'
