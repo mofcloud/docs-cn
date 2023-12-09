@@ -1,5 +1,5 @@
 ## AWS 账单类型
-AWS 提供 3中方式查看当前开销，Mof 可以从 Cost Explorer & 账单报告中采集数据。
+AWS 提供 3种方式查看当前开销，Mof 可以从 Cost Explorer & 账单报告中采集数据。
 
 建议使用**账单报告**采集数据，数据默认存储在 S3，价格底，数据全。
 
@@ -19,14 +19,14 @@ Cost Explorer 根据请求数收费，如果频繁访问，成本高。
 ### 地域（不可修改）
 请跟据 AWS 账号归属，选择相应的地域
 
+- [x] 中国站
+- [x] 全球站
+
 ### 访问密钥（不可修改）
 请参考官方文档获取[访问密钥](https://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)
 Mof 只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。
 
 ![img.png](img/aws-cred.zh.png)
-
-Mof 需要如下的**可读权限**
-![img.png](img/aws-cred-per.zh.png)
 
 ### 密钥权限
 复制如下策略为 AWS 用户赋予权限。
@@ -97,7 +97,7 @@ AWS 默认不开启账单报告，请参考[AWS 创建成本和使用情况报�
 ![img.png](img/aws-report-mof.zh.png)
 
 ## 更新账号
-请在 **供应商账号** 先选择相应的账号。
+请在 **云账号** 先选择相应的账号。
 
 ### 基本信息
 可修改，不影响数据分析。
@@ -132,5 +132,5 @@ Mof 在同步账单之后，会列出所有可用的标签，如果想要在**�
 ![img.png](img/discount-after.zh.png)
 
 
-## 删除供应商账号
-删除供应商账号时，会删除所有成本 & 资源数据。
+## 删除云账号
+删除云账号时，会删除所有成本 & 资源数据。

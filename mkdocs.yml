@@ -36,6 +36,18 @@ plugins:
             Add providers: 添加云厂商
             AWS: AWS
             AlibabaCloud: 阿里云
+            HuaweiCloud: 华为云
+            TencentCloud: 腾讯云
+            UCloud: UCloud
+            BaiduCloud: 百度云
+            Cloudflare: Cloudflare
+            BaishanCloud: 白山云
+            Agora: 声网
+            NetEaseYidun: 网易易盾
+            NetEaseYunxin: 网易云信
+            ECloudValley(enterprise): ECloudValley(私有版)
+            MeshCloud(enterprise): 脉时云(私有版)
+            CustomCloud: 自定义云
 
 markdown_extensions:
   - attr_list
@@ -58,6 +70,9 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 nav:
   - 'Introduction': 'index.md'
@@ -66,6 +81,20 @@ nav:
       - 'Add providers':
           - 'AWS': 'user-guide/providers/aws.md'
           - 'AlibabaCloud': 'user-guide/providers/alibaba.md'
+          - 'HuaweiCloud': 'user-guide/providers/huawei.md'
+          - 'TencentCloud': 'user-guide/providers/tencent.md'
+          - 'UCloud': 'user-guide/providers/ucloud.md'
+          - 'BaiduCloud': 'user-guide/providers/baidu.md'
+          - 'Cloudflare': 'user-guide/providers/cloudflare.md'
+          - 'BaishanCloud': 'user-guide/providers/baishan.md'
+          - 'Agora': 'user-guide/providers/agora.md'
+          - 'NetEaseYidun': 'user-guide/providers/yidun.md'
+          - 'NetEaseYunxin': 'user-guide/providers/yunxin.md'
+          - 'CustomCloud': 'user-guide/providers/custom.md'
+          - 'ECloudValley(enterprise)': 'user-guide/providers/ev.md'
+          - 'MeshCloud(enterprise)': 'user-guide/providers/mesh.md'
+
+
   - 'Cloud Wiki': 'cloud-wiki/index.md'
   - 'FinOps Wiki': 'finops-wiki/index.md'
   - 'Best practice': 'best-practice/index.md'

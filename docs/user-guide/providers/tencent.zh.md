@@ -1,4 +1,4 @@
-Mof 使用阿里云账单 API [DescribeInstanceBill](https://help.aliyun.com/document_detail/473030.htm) 获取账单数据。
+Mof 使用腾讯云账单 API [DescribeBillDetail](https://cloud.tencent.com/document/product/555/19182) 获取账单数据。
 
 ## 添加账号
 
@@ -6,82 +6,66 @@ Mof 使用阿里云账单 API [DescribeInstanceBill](https://help.aliyun.com/doc
 账号名称用于展示，可以重名，建议使用不同的名称
 
 ### 地域（不可修改）
-请跟据阿里云账号归属，选择相应的地域
+请跟据腾讯云账号归属，选择相应的地域
 
 - [x] 中国站
 - [ ] 国际站(即将支持)
 
 ### 访问密钥（不可修改）
-请参考官方文档获取[访问密钥](https://help.aliyun.com/document_detail/268244.html)
+请参考官方文档获取[访问密钥](https://support.huaweicloud.com/usermanual-iam/iam_02_0003.html)
 Mof 只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。
 
 ![img.png](img/aws-cred.zh.png)
 
 ### 密钥权限
-复制如下策略为阿里云用户赋予权限。
+复制如下策略为腾讯云用户赋予权限。
 
-![img.png](img/alibaba-policy.png)
+![img.png](img/tencent-policy.png)
 
 ```json
 {
-  "Version": "1",
-  "Statement": [
+  "statement": [
     {
-      "Effect": "Allow",
-      "Action": "bssapi:DescribeInstanceBill",
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ram:ListPoliciesForUser",
-        "ram:GetPolicy"
+      "action": [
+        "finance:DescribeBillDetail"
       ],
-      "Resource": "*"
+      "effect": "allow",
+      "resource": [
+        "*"
+      ]
     },
     {
-      "Effect": "Allow",
-      "Action": [
-        "ecs:DescribeInstances",
-        "ecs:DescribeDisksFullStatus"
+      "action": [
+        "cvm:DescribeInstances",
+        "cvm:DescribeCbsStorages",
+        "cvm:DescribeAddresses"
       ],
-      "Resource": "*"
+      "effect": "allow",
+      "resource": [
+        "*"
+      ]
     },
     {
-      "Effect": "Allow",
-      "Action": "cms:QueryMetricList",
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "alb:ListListeners",
-        "alb:ListServerGroupServers"
+      "action": [
+        "monitor:GetMonitorData"
       ],
-      "Resource": "*"
+      "effect": "allow",
+      "resource": [
+        "*"
+      ]
     },
     {
-      "Effect": "Allow",
-      "Action": [
-        "slb:DescribeLoadBalancers",
-        "slb:DescribeLoadBalancerAttribute"
+      "action": [
+        "cam:GetPolicy",
+        "cam:ListPoliciesGrantingServiceAccess"
       ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "nlb:ListLoadBalancers",
-        "nlb:ListListeners"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": "vpc:Describe*",
-      "Resource": "*"
+      "effect": "allow",
+      "resource": [
+        "*"
+      ]
     }
-  ]
+  ],
+  "version": "2.0"
 }
 ```
 
@@ -115,7 +99,7 @@ Mof 在同步账单之后，会列出所有可用的标签，如果想要在**�
 ![img.png](img/tag.zh.png)
 
 ### 折扣列表
-如果用户与阿里云有线下的折扣合约，并且不展示在账单数据中时，用户可以在此配置，折扣会影响到**智能账单**中的数据中。
+如果用户与腾讯云有线下的折扣合约，并且不展示在账单数据中时，用户可以在此配置，折扣会影响到**智能账单**中的数据中。
 
 ![img.png](img/discount.zh.png)
 

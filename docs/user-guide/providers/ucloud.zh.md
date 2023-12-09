@@ -1,4 +1,4 @@
-Mof 使用阿里云账单 API [DescribeInstanceBill](https://help.aliyun.com/document_detail/473030.htm) 获取账单数据。
+Mof 使用 UCloud 账单 API [ListUBillDetail](https://docs.ucloud.cn/api/ubill-api/list_u_bill_detail) 获取账单数据。
 
 ## 添加账号
 
@@ -6,80 +6,90 @@ Mof 使用阿里云账单 API [DescribeInstanceBill](https://help.aliyun.com/doc
 账号名称用于展示，可以重名，建议使用不同的名称
 
 ### 地域（不可修改）
-请跟据阿里云账号归属，选择相应的地域
+请跟据 UCloud 账号归属，选择相应的地域
 
 - [x] 中国站
-- [ ] 国际站(即将支持)
 
 ### 访问密钥（不可修改）
-请参考官方文档获取[访问密钥](https://help.aliyun.com/document_detail/268244.html)
+请参考官方文档获取[访问密钥](https://docs.ucloud.cn/uproject/user)
 Mof 只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。
 
 ![img.png](img/aws-cred.zh.png)
 
 ### 密钥权限
-复制如下策略为阿里云用户赋予权限。
+UCloud 策略分为**全局级**和**项目级**，用户需要对每个项目配置如下策略，否则 Mof 收集的数据不会完整。
 
-![img.png](img/alibaba-policy.png)
+![img.png](img/ucloud-policy.png)
 
+#### 全局级
 ```json
 {
   "Version": "1",
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": "bssapi:DescribeInstanceBill",
-      "Resource": "*"
+      "Action": [
+        "iam:ListPoliciesForUser",
+        "iam:GetIAMPolicy",
+        "ubill:ListUBillDetail"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}
+```
+
+#### 项目级
+```json
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "uhost:DescribeUHostInstance"
+      ],
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Effect": "Allow",
       "Action": [
-        "ram:ListPoliciesForUser",
-        "ram:GetPolicy"
+        "udisk:DescribeUDisk"
       ],
-      "Resource": "*"
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Effect": "Allow",
       "Action": [
-        "ecs:DescribeInstances",
-        "ecs:DescribeDisksFullStatus"
+        "unet:DescribeEIP"
       ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": "cms:QueryMetricList",
-      "Resource": "*"
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Effect": "Allow",
       "Action": [
-        "alb:ListListeners",
-        "alb:ListServerGroupServers"
+        "umon:*"
       ],
-      "Resource": "*"
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Effect": "Allow",
       "Action": [
-        "slb:DescribeLoadBalancers",
-        "slb:DescribeLoadBalancerAttribute"
+        "umonitor:*"
       ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "nlb:ListLoadBalancers",
-        "nlb:ListListeners"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": "vpc:Describe*",
-      "Resource": "*"
+      "Resource": [
+        "*"
+      ]
     }
   ]
 }
@@ -115,7 +125,7 @@ Mof 在同步账单之后，会列出所有可用的标签，如果想要在**�
 ![img.png](img/tag.zh.png)
 
 ### 折扣列表
-如果用户与阿里云有线下的折扣合约，并且不展示在账单数据中时，用户可以在此配置，折扣会影响到**智能账单**中的数据中。
+如果用户与 UCloud 有线下的折扣合约，并且不展示在账单数据中时，用户可以在此配置，折扣会影响到**智能账单**中的数据中。
 
 ![img.png](img/discount.zh.png)
 
