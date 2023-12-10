@@ -11,6 +11,9 @@ Cost Explorer 根据请求数收费，如果频繁访问，成本高。
 | Cost Explorer | 支持     | 收费       | 用户可以从 Cost Explorer 报表中，查询开销 |
 | 账单报告          | 支持     | 收费       | 用户可以结合 AWS Athena 进行查询       |
 
+## 优化方案
+目前，不支持优化方案，Mof 团队会陆续添加优化方案。
+
 ## 添加账号
 
 ### 基本信息（可修改）
@@ -78,7 +81,7 @@ Mof 只需要可读权限，如果权限不全，会导致数据收集不全，�
 系统收集所有纬度的数据，默认纬度用于统计所有云厂商的成本，不影响数据准确性
 
 ### 账单报告名称（可选项）
-AWS 默认不开启账单报告，请参考[AWS 创建成本和使用情况报告](https://docs.aws.amazon.com/zh_cn/cur/latest/userguide/cur-create.html)，Mof 只需要报告名称。
+AWS 默认不开启账单报告，请参考[AWS 创建成本和使用情况报告](https://docs.aws.amazon.com/zh_cn/cur/latest/userguide/cur-create.html)，Mof 只需要报告名称，刚刚开启账单报告的话，AWS 需要几个小时才可以开始同步，请耐心等待。
 
 选项对 Mof 的影响：
 

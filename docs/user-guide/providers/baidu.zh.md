@@ -1,5 +1,10 @@
 Mof 使用百度云账单 API [ResourceBillList](https://cloud.baidu.com/doc/Finance/s/cjxedqyml) 获取账单数据。
 
+## 优化方案
+| 服务       | 支持的优化类型 |
+|----------|---------|
+| 云服务器 BCC | 未使用     |
+
 ## 添加账号
 
 ### 基本信息（可修改）

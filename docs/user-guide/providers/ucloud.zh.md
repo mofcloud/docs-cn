@@ -1,5 +1,12 @@
 Mof 使用 UCloud 账单 API [ListUBillDetail](https://docs.ucloud.cn/api/ubill-api/list_u_bill_detail) 获取账单数据。
 
+## 优化方案
+| 服务         | 支持的优化类型 |
+|------------|---------|
+| 云服务器 UHost | 未使用     |
+| 云硬盘 UDisk  | 未使用     |
+| 弹性 IP UNet | 未使用     |
+
 ## 添加账号
 
 ### 基本信息（可修改）

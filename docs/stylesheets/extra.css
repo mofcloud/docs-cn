@@ -13,11 +13,6 @@
     border-left: solid #2d3d93;
 }
 
-.md-typeset :is(.admonition-title,summary) {
-    background-color: #F9E6FF;
-    border-left: solid #2d3d93;
-}
-
 .md-typeset :is(.admonition-title,details):before {
     background-color: #2d3d93;
 }

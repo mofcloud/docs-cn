@@ -1,5 +1,10 @@
 Mof 使用腾讯云账单 API [DescribeBillDetail](https://cloud.tencent.com/document/product/555/19182) 获取账单数据。
 
+## 优化方案
+| 服务       | 支持的优化类型 |
+|----------|---------|
+| 云服务器 CVM | 未使用     |
+
 ## 添加账号
 
 ### 基本信息（可修改）

@@ -1,5 +1,10 @@
 Mof 使用华为云账单 API [ListCustomerselfResourceRecords](https://support.huaweicloud.com/api-oce/mbc_00004.html) 获取账单数据。
 
+## 优化方案
+| 服务        | 支持的优化类型 |
+|-----------|---------|
+| 云服务器 ECS  | 未使用     |
+
 ## 添加账号
 
 ### 基本信息（可修改）

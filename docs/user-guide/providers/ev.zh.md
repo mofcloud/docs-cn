@@ -2,6 +2,9 @@
 
 目前，Mof 使用 [chormedp](https://github.com/chromedp/chromedp) 登陆控制台获取账单数据。
 
+## 优化方案
+目前，不支持优化方案，Mof 团队会陆续添加优化方案。
+
 ## 添加账号
 
 ### 基本信息（可修改）

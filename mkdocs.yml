@@ -57,6 +57,8 @@ plugins:
             Sync: 数据同步
             Exchange Rate: 汇率中心
             User: 用户设置
+            Optimization: 云优化
+            Unused: 未使用
 
 markdown_extensions:
   - attr_list
@@ -78,7 +80,6 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -111,6 +112,8 @@ nav:
           - 'CustomCloud': 'user-guide/providers/custom.md'
           - 'ECloudValley(enterprise)': 'user-guide/providers/ev.md'
           - 'MeshCloud(enterprise)': 'user-guide/providers/mesh.md'
+      - Optimization:
+          Unused: 'user-guide/opt/unused.md'
   - 'Cloud Wiki': 'cloud-wiki/index.md'
   - 'FinOps Wiki': 'finops-wiki/index.md'
   - 'Best practice': 'best-practice/index.md'
