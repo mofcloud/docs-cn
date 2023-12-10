@@ -33,7 +33,7 @@ plugins:
             FinOps Wiki: FinOps 百科
             Best practice: 最佳实践
             Contact: 联系我们
-            Add providers: 添加云厂商
+            Providers: 云厂商
             AWS: AWS
             AlibabaCloud: 阿里云
             HuaweiCloud: 华为云
@@ -56,7 +56,7 @@ plugins:
             Organization: 组织架构
             Sync: 数据同步
             Exchange Rate: 汇率中心
-
+            User: 用户设置
 
 markdown_extensions:
   - attr_list
@@ -87,7 +87,16 @@ nav:
   - 'Introduction': 'index.md'
   - 'Getting started': 'getting-started/index.md'
   - 'User guide':
-      - 'Add providers':
+      - 'Smart bill':
+          - 'Smart monthly bill': 'user-guide/bills/smart.md'
+          - 'Monthly bill': 'user-guide/bills/monthly.md'
+          - 'Bill history': 'user-guide/bills/history.md'
+          - 'Download bill': 'user-guide/bills/download.md'
+      - 'Organization': 'user-guide/org/index.md'
+      - 'Sync': 'user-guide/sync/index.md'
+      - 'Exchange Rate': 'user-guide/exchange/index.md'
+      - 'User': 'user-guide/user/index.md'
+      - 'Providers':
           - 'AWS': 'user-guide/providers/aws.md'
           - 'AlibabaCloud': 'user-guide/providers/alibaba.md'
           - 'HuaweiCloud': 'user-guide/providers/huawei.md'
@@ -102,14 +111,6 @@ nav:
           - 'CustomCloud': 'user-guide/providers/custom.md'
           - 'ECloudValley(enterprise)': 'user-guide/providers/ev.md'
           - 'MeshCloud(enterprise)': 'user-guide/providers/mesh.md'
-      - 'Smart bill':
-          - 'Smart monthly bill': 'user-guide/bills/smart.md'
-          - 'Monthly bill': 'user-guide/bills/monthly.md'
-          - 'Bill history': 'user-guide/bills/history.md'
-          - 'Download bill': 'user-guide/bills/download.md'
-      - 'Organization': 'user-guide/org/index.md'
-      - 'Sync': 'user-guide/sync/index.md'
-      - 'Exchange Rate': 'user-guide/exchange/index.md'
   - 'Cloud Wiki': 'cloud-wiki/index.md'
   - 'FinOps Wiki': 'finops-wiki/index.md'
   - 'Best practice': 'best-practice/index.md'
