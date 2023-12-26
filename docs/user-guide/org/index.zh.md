@@ -1,7 +1,7 @@
 用户更关心**团队**的云成本分析，因此，Mof 引入了组织架构的概念，用户可以把云账号账单**按照比例分摊**到组织架构中。
 
 ## 概念
-![](img/org-overview.png)
+![](img/org-arch.zh.png)
 
 | 概念 | 描述                    | 
 | --- |-----------------------|
@@ -14,12 +14,15 @@
 ## 创建组织
 用户可以创建多个组织架构。
 
-![](img/create-org.png)
+![](img/create-org.zh.png)
 
 ## 创建部门
 用户可以创建多个嵌套的部门，可以重名，但是不建议。
 
-![](img/create-dep.png)
+![](img/create-dep.zh.png)
+
+## 添加月份
+![](img/create-month.zh.png)
 
 ## 绑定云账号
 > ⚠️ 请注意！
@@ -27,33 +30,29 @@
 
 用户可以绑定多个云账号，并且选择一个分摊纬度。
 
-![](img/bind-account.png)
+![](img/bind-account.zh.png)
 
 ## 分摊到部门
 这个例子中，我们按照地域分类，然后把两个地域分别分摊到**团队A**和**团队B**中。
 
-![](img/add-mapping.png)
+- 华北-北京一 分摊到团队A
 
-- 华北-北京1 分摊到团队A
+![](img/bind-1.zh.png)
 
-![](img/bind-1.png)
+- 华北-北京四 分摊到团队B
 
-
-- 华北-北京4 分摊到团队B
-
-![](img/bind-2.png)
 
 - 保存账单规则
 
-![](img/save-rule.png)
+![](img/save-rule.zh.png)
 
 ## 查看未分配
 保存之后，我们可以看到未匹配的纬度 & 百分比。
 
-![](img/remaining-mapping.png)
+![](img/view-rule.zh.png)
 
 ## 查看账单
 **智能账单**页面中，可以查看组织架构纬度账单
 
-![](img/bill.png)
+![](img/bill.zh.png)
 
