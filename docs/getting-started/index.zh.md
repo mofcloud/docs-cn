@@ -1,5 +1,5 @@
 ## 添加云账号
-![Image title](img/zh/add-account-choose.png)
+![Image title](img/zh/add-account-to-choose.png)
 
 - 选择 **云账号** -> **添加供应商** -> **阿里云**
 
@@ -9,7 +9,7 @@
     - **访问密钥**：请参考官方文档获取[访问密钥](https://help.aliyun.com/document_detail/268244.html)，权限请点击 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/question.svg" width="8" height="8">
     - **默认统计维度**：系统收集所有纬度的数据，默认纬度用于统计所有云厂商的成本，不影响数据准确性
 
-![Image title](img/zh/add-account-fill.png)
+![Image title](img/zh/add-account-to-fill.png)
 
 ## 收集数据
 账号添加完成之后，系统会立刻开始收集数据，可以在**数据同步**中查看。
@@ -21,7 +21,17 @@
 ## 智能账单
 等数据同步完成之后，可以在**智能账单**中查看分析报告。
 
-![Image title](img/zh/smart-bill-overview.png)
+!!! info "功能"
+    **账单分类**与**账单条件过滤**为通用功能。
+    
+    - **智能月账单**
+        - 异动图，月账单异动分析，账单详情，资源账单，Mofis 智能分析
+    - **月账单**
+        - 账单预估，月账单分类图
+    - **历史账单**
+        - 分类账单，账单条件过滤，账单趋势图，Mofis 智能分析
+    - **服务器分析**
+        - 利用率，月账单&历史账单，配置信息，监控数据，Mofis 智能分析
 
 ### 智能月账单
 从账单异动的角度，分析月账单趋势。
