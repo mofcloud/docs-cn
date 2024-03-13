@@ -1,17 +1,43 @@
 ## 添加云账号
-=== "1: 添加云账号"
+=== "1: 选择云"
     ![Image title](img/zh/add-account-to-choose.png)
 
+=== "2: 账号信息"
+
     !!! info "步骤"
-        - 选择 **云账号** -> **添加供应商** -> **华为云**
+        - 选择 **云账号** -> **添加云账号** -> **华为云**
 
         - 填写相关信息
             - **基本信息**：账号名称用于展示，可以重名，建议使用不同的名称
             - **地域**：如果华为云的结算货币未知，系统会使用地域确定货币种类，目前支持全球（美元），中国（人民币）
-            - **访问密钥**：请参考官方文档获取[访问密钥](https://help.aliyun.com/document_detail/268244.html)，权限请点击 <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/question.svg" width="8" height="8">
+            - **访问密钥**：请参考官方文档获取[访问密钥](https://support.huaweicloud.com/usermanual-iam/iam_02_0003.html)，权限如下:
+            ``` json
+            {
+                "Version": "1.1",
+                "Statement": [
+                    {
+                        "Action": [
+                            "rms:*:list",
+                            "rms:*:get",
+                            "rms:*:getStatus",
+                            "bss:bill:view",
+                            "vpc:vpcs:list",
+                            "vpc:subnets:get",
+                            "evs:volumes:list",
+                            "rds:instance:list",
+                            "ecs:cloudServers:list",
+                            "ces:metricData:list"
+                        ],
+                        "Effect": "Allow"
+                    }
+                ]
+            }
+            ```
             - **默认统计维度**：系统收集所有纬度的数据，默认纬度用于统计所有云厂商的成本，不影响数据准确性
 
-=== "2: 自动收集数据"
+    ![Image title](img/zh/add-account-to-fill.png)
+
+=== "3: 自动收集数据"
     !!! info "查看数据同步过程"
         账号添加完成之后，系统会立刻开始收集数据，可以在**数据同步**中查看。
     
@@ -23,12 +49,12 @@
 等数据同步完成之后，可以在**智能账单**中查看分析报告。
 
 !!! info "功能"
-    **账单分类**，**账单条件过滤**，**下载账单为**通用功能。
+ **账单分类**，**账单条件过滤**，**下载账单为**通用功能。
     
     - **智能月账单**
         - 异动图，分类账单详情，资源账单详情，Mofis 智能分析
     - **月账单**
-        - 月账单分类图，账单预估，
+        - 月账单分类图，账单预估
     - **历史账单**
         - 账单趋势图，Mofis 智能分析
     - **服务器分析**
