@@ -50,6 +50,7 @@ plugins:
             MeshCloud(enterprise): 脉时云(私有版)
             CustomCloud: 自定义云
             Smart bill: 智能账单
+            Server analysis: 服务器分析
             Smart monthly bill: 智能月账单
             Monthly bill: 月账单
             Bill history: 历史账单
@@ -58,8 +59,6 @@ plugins:
             Sync: 数据同步
             Exchange Rate: 汇率中心
             User: 用户设置
-            Optimization: 云优化
-            Unused: 未使用
 
 markdown_extensions:
   - attr_list
@@ -68,7 +67,11 @@ markdown_extensions:
   - admonition
   - footnotes
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - md_in_html
   - pymdownx.tabbed:
       alternate_style: true
@@ -94,6 +97,7 @@ nav:
           - "Monthly bill": "user-guide/bills/monthly.md"
           - "Bill history": "user-guide/bills/history.md"
           - "Download bill": "user-guide/bills/download.md"
+          - "Server analysis": "user-guide/bills/server.md"
       - "Organization": "user-guide/org/index.md"
       - "Sync": "user-guide/sync/index.md"
       - "Exchange Rate": "user-guide/exchange/index.md"
@@ -114,8 +118,6 @@ nav:
           - "CustomCloud": "user-guide/providers/custom.md"
           - "ECloudValley(enterprise)": "user-guide/providers/ev.md"
           - "MeshCloud(enterprise)": "user-guide/providers/mesh.md"
-      - Optimization:
-          Unused: "user-guide/opt/unused.md"
   - "Cloud Wiki": "cloud-wiki/index.md"
   - "FinOps Wiki": "finops-wiki/index.md"
   - "Best practice": "best-practice/index.md"

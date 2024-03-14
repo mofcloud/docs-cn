@@ -5,28 +5,24 @@
 ## 实时汇率
 Mof 系统每天更新当前的实时汇率，历史汇率，Mof 默认使用当月最后一天的汇率。
 
-![](img/exchange-view.png)
+![](img/zh/overview.png)
 
 ## 覆盖汇率
-用户还可以使用自定义的汇率值。
+=== "1.点击修改按钮"
+    ![](img/zh/edit-step-1.png)
 
-- 点击修改按钮
+=== "2.输入需要修改的值"
+    ![](img/zh/edit-step-2.png)
 
-![](img/edit-step-1.png)
+=== "3.查看系统汇率 & 自定义汇率"
+    覆盖的汇率会高亮显示，同时显示系统汇率。
 
-- 输入需要修改的值
-  
-![](img/edit-step-2.png)
-
-- 查看系统汇率 & 自定义汇率
-覆盖的汇率会高亮显示，同时显示系统汇率。
-
-![](img/edit-step-3.png)
+    ![](img/zh/edit-step-3.png)
 
 ## 恢复系统汇率
 恢复汇率，只需要在相应的汇率框里输入 **-1** 即可。
 
-![](img/recover.png)
+![](img/zh/recover.png)
 
 ## 更改用户货币
 
@@ -34,4 +30,4 @@ Mof 系统每天更新当前的实时汇率，历史汇率，Mof 默认使用当
 
 ## 效果
 
-![](img/effect.png)
+![](img/zh/effect.png)

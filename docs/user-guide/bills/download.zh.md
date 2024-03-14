@@ -1,24 +1,24 @@
 用户可以通过 Mof 下载 Excel 格式的账单，点击**下载 & 预览账单**按钮，即可进入下载页面。
 
-![](img/download-button.zh.png)
+![](img/zh/download-button.png)
 
-## 组织架构月账单
-选择根组织架构 & 账单规则 & 账单月份
+=== "组织架构"
+    选择根组织架构 & 账单规则 & 账单月份
 
-![](img/download-org.zh.png)
+    ![](img/zh/download-org.png)
 
-![](img/download-excel-org.zh.png)
+    ![](img/zh/download-excel-org.png)
 
-## 所有云账号月账单
-选择账单月份
+=== "所有云账号"
+    选择账单月份
 
-![](img/download-all.zh.png)
+    ![](img/zh/download-all.png)
 
-![](img/download-excel-all.zh.png)
+    ![](img/zh/download-excel-all.png)
 
-## 云账号月账单
-选择云账号，账单月份
+=== "云账号"
+    选择云账号，账单月份
 
-![](img/download-account.zh.png)
+    ![](img/zh/download-account.png)
 
-![](img/download-excel-account.zh.png)
+    ![](img/zh/download-excel-account.png)
