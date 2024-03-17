@@ -1,6 +1,36 @@
-目前，Mof 使用 [chormedp](https://github.com/chromedp/chromedp) 登陆控制台获取账单数据。
+Mof 会通过 service principal 读取账单相关数据。
 
 ---
+
+## 准备工作
+!!! example "安装 Azure CLI（如果已经有 service principal，请忽略）"
+    如果没有创建 service principal，请根据如下的步骤，进行创建。用户也可以在 Azure 控制台中创建，步骤请参考官方文档。
+
+=== "1.创建 Azure Service Principal"
+    !!! example "解释"
+        运行如下命令
+
+        请将 appId, tenant, password 记录下来，Mof 将会使用此密钥。
+
+        ```shell
+            az ad sp create-for-rbac -n "mofcloud"
+        ```
+
+=== "2.添加权限"
+    !!! example "解释"
+        您可以把 Billing account 或者 Management Group 的 READ 权限赋予 service principal。
+
+        运行如下命令（Billing account 或者 Management Group ID 请在控制台中获取）
+
+        ```shell
+            az role assignment create --assignee <SERVICE_PRINCIPAL_APP_ID> --role Reader --scope "/providers/Microsoft.Management/managementGroups/<MANAGEMENT_GROUP_ID>"
+        ```
+
+        OR
+
+        ```shell
+            az role assignment create --assignee <SERVICE_PRINCIPAL_APP_ID> --role Reader --scope "/providers/Microsoft.Management/managementGroups/<MANAGEMENT_GROUP_ID>"
+        ```
 
 ## 添加账号
 === "1.基本信息"
@@ -9,23 +39,18 @@
 
 === "2.地域"
     !!! example "解释"
-        请跟据网易易盾账号归属，选择相应的地域
+        请跟据 AWS 账号归属，选择相应的地域。**可修改**
 
-        - [x] 中国站
+        - [ ] 中国站
+        - [x] 全球站
 
 === "3.访问密钥"
     !!! example "解释"
-        请输入[网易云信控制台](https://id.grow.163.com/)账号密码。
+        Mof 只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。
 
-        ![](img/zh/yunxin-cred.png)
+        ![](img/zh/azure-cred.png)
 
-        ![](img/zh/pass-cred.png)
-
-=== "4.密钥权限"
-    !!! example "解释"
-        账单数据，不会采取任何**写操作**，请放心使用。
-
-=== "5.统计维度"
+=== "4.统计维度"
     !!! example "解释"
         系统收集所有纬度的数据，默认纬度用于统计所有云厂商的成本，不影响数据准确性
 
@@ -36,7 +61,7 @@
 
 === "2.扩展信息"
     !!! example "解释"
-        可修改。
+        可修改，如果修改了账单报告名称，Mof 在下一次同步数据的时候，会从新的报告同步。
 
 === "3.访问密钥"
     !!! example "解释"

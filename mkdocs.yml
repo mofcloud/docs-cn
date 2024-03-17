@@ -35,7 +35,8 @@ plugins:
             Contact: 联系我们
             Providers: 云厂商
             AWS: AWS
-            Google Cloud: 谷歌云
+            Azure: Azure
+            Google Cloud: GCP
             AlibabaCloud: 阿里云
             HuaweiCloud: 华为云
             TencentCloud: 腾讯云
@@ -104,8 +105,9 @@ nav:
       - "User": "user-guide/user/index.md"
       - "Providers":
           - "AWS": "user-guide/providers/aws.md"
-          - "AlibabaCloud": "user-guide/providers/alibaba.md"
+          - "Azure": "user-guide/providers/azure.md"
           - "Google Cloud": "user-guide/providers/gcp.md"
+          - "AlibabaCloud": "user-guide/providers/alibaba.md"
           - "HuaweiCloud": "user-guide/providers/huawei.md"
           - "TencentCloud": "user-guide/providers/tencent.md"
           - "UCloud": "user-guide/providers/ucloud.md"
