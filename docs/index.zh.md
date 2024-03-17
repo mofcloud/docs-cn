@@ -19,15 +19,11 @@ Mof 会持续覆盖主流的云服务商，让用户从云计算中获得最大�
 
     提供只读权限的密钥，自动收集数据，得出分析结果
 
-    [:octicons-arrow-right-24: 开始使用](getting-started/index.md)
-
 -   :fontawesome-solid-comments-dollar:{ .lg .middle } __智能账单__
 
     ---
 
     资源级别账单，分析异动，使用量，利用率，评估成本风险
-
-    [:octicons-arrow-right-24: 智能账单](#)
 
 -   :fontawesome-solid-file-export:{ .lg .middle } __账单下载__
 
@@ -35,7 +31,11 @@ Mof 会持续覆盖主流的云服务商，让用户从云计算中获得最大�
 
     Excel 格式多云账单下载，组织架构级别，多维度，历史账单
 
-    [:octicons-arrow-right-24: 账单下载](#)
+-   :fontawesome-solid-server:{ .lg .middle } __服务器分析__
+
+    ---
+
+    结合服务器利用率，账单，监控等数据，判断【未使用】&【低利用率】
 
 -   :fontawesome-solid-sitemap:{ .lg .middle } __组织架构__
 
@@ -43,15 +43,11 @@ Mof 会持续覆盖主流的云服务商，让用户从云计算中获得最大�
 
     组织架构级别成本分析，轻松自定义公司架构和成本映射
 
-    [:octicons-arrow-right-24: 组织架构账单](#)
-
 -   :fontawesome-solid-cloud:{ .lg .middle } __多云支持__
 
     ---
 
     支持海内外主流云厂商，涵盖 IAAS，PAAS，SAAS
-
-    [:octicons-arrow-right-24: 多云](#)
 
 -   :fontawesome-solid-arrow-right-arrow-left:{ .lg .middle } __汇率中心__
 
@@ -59,5 +55,4 @@ Mof 会持续覆盖主流的云服务商，让用户从云计算中获得最大�
 
     自动结汇多币种成本，提供实时汇率同步 & 覆盖
 
-    [:octicons-arrow-right-24: 汇率中心](#)
 </div>

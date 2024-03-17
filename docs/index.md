@@ -31,6 +31,12 @@ Data syncing and analysis will be done by Mof automatically.
 
     Download bill report as Excel with multiple dimensions
 
+-   :fontawesome-solid-server:{ .lg .middle } __Server Analysis__
+
+    ---
+
+    Based on metrics and bill data, check【Unused】&【Right Sizing】servers
+
 -   :fontawesome-solid-sitemap:{ .lg .middle } __Organization__
 
     ---
