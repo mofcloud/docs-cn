@@ -52,6 +52,7 @@ Cost Explorer 根据请求数收费，如果频繁访问，成本高。
                         "cur:DescribeReportDefinitions",
                         "s3:ListBucket",
                         "s3:GetObject",
+                        "cloudwatch:GetMetricData"
                     ],
                     "Resource": "*"
                 }
@@ -65,8 +66,6 @@ Cost Explorer 根据请求数收费，如果频繁访问，成本高。
 
 === "6.账单报告"
     !!! example "解释"
-        系统收集所有纬度的数据，默认纬度用于统计所有云厂商的成本，不影响数据准确性
-
         AWS 默认不开启账单报告，请参考[AWS 创建成本和使用情况报告](https://docs.aws.amazon.com/zh_cn/cur/latest/userguide/cur-create.html)，Mof 只需要报告名称，刚刚开启账单报告的话，AWS 需要几个小时才可以开始同步，请耐心等待。
 
         选项对 Mof 的影响：

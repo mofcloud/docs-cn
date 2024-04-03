@@ -1,6 +1,6 @@
 ## 添加云账号
 === "1: 选择云"
-    ![Image title](img/zh/add-account-to-choose.png)
+    ![](img/zh/add-account-to-choose.png)
 
 === "2: 账号信息"
 
