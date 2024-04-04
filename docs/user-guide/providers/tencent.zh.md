@@ -39,7 +39,7 @@ Mof 使用腾讯云账单 API [DescribeBillDetail](https://cloud.tencent.com/doc
             },
             {
               "action": [
-                "cvm:DescribeInstances",
+                "cvm:DescribeInstances"
               ],
               "effect": "allow",
               "resource": [

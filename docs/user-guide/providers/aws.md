@@ -27,6 +27,8 @@ The cost of Cost Explorer is expensive.
         Please refer to official docs of [AK/SK](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)
         Mof needs **read only** permission.
 
+        ![](img/en/aksk-cred.png)
+
 === "4.Permission"
     !!! example "Explanation"
         Copy bellow permission to your AK/SK.

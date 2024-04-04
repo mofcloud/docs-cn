@@ -12,7 +12,7 @@ Mof 使用华为云账单 API [ListCustomerselfResourceRecords](https://support.
         请跟据账号归属，选择相应的地域。**可修改**
 
         - [x] 中国站
-        - [ ] 全球站
+        - [x] 全球站
 
 === "3.访问密钥"
     !!! example "解释"

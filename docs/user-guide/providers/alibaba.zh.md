@@ -12,9 +12,9 @@ Mof 使用阿里云账单 API [DescribeInstanceBill](https://help.aliyun.com/doc
         请跟据账号归属，选择相应的地域。**可修改**
 
         - [x] 中国站
-        - [ ] 全球站
+        - [x] 全球站
 
-=== "3.访问密钥"
+=== "3.AK/SK"
     !!! example "解释"
         请参考官方文档获取[访问密钥](https://help.aliyun.com/document_detail/268244.html)
         Mof 只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。

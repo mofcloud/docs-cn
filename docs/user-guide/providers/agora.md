@@ -35,55 +35,53 @@ Mof will use [chormedp](https://github.com/chromedp/chromedp) to select billing 
         For grouping bill data which is based on Cloud Provider's raw data.
 
 
-## Update account
+## Update cloud account
 === "1.Basic info"
     !!! example "Explanation"
-        Modifiable
+        Modifiable.
 
 === "2.Extension"
     !!! example "Explanation"
-        Modifiable
+        Modifiable. Once updated, Mof will sync from new bill report.
 
 === "3.Credential"
     !!! example "Explanation"
-        Unmodifiable
+        Unmodifiable.
 
 ## Auto sync
 !!! example "Explanation"
-    Mof will sync data automatically.
+    Mof will run cron job based on configuration
 
     ![](img/en/cron.png)
 
-## 标签管理
-!!! example "解释"
-Mof 在同步账单之后，会列出所有可用的标签，如果想要在**智能账单**中按照标签分类，需要在这里配置。
+## Tag management
+!!! example "Explanation"
+    Mof will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
 
-    之所以有这配置，是因为标签可能会非常多（包括系统标签），会影响用户体验。
+    ![](img/en/tag.png)
 
-    ![](img/zh/tag.png)
+## Discount list
+!!! example "Explanation"
+    In some case, if bills from cloud account does not contain special discount, user can apply discount on bill data.
 
-## 折扣列表
-!!! example "解释"
-如果用户有线下的折扣合约，并且不展示在账单数据中时，用户可以在此配置，折扣会影响到**智能账单**中的数据中。
+    ![](img/en/discount.png)
 
-    ![](img/zh/discount.png)
+## Lock Account and Bills
+!!! example "Explanation"
+    There are two types of locks which can lead to no updates on bills while syncing data.
 
-## 锁定云账号和账单
-!!! example "解释"
-为了防止重复拉取账单数据时，因为某些因素的改变，如标签等，导致账单过往账单可能会被更新，引入了两个锁。
+    - **Account lock**：Not pulling billing data anymore
+    - **Bill lock**：Not pulling billing data on specific month
 
-    - **账号锁**：不再拉取新的数据
-    - **账单锁**：不更新指定月份的账单
+    ![](img/en/lock.png)
 
-    ![](img/zh/lock.png)
+## Billing Data Override
+!!! example "Explanation"
+    Used to override **payment** data.
 
-## 数据覆盖
-!!! example "解释"
-用于覆盖某月，某个 Group 下的【应付金额】。
+    ![](img/en/override-table.png)
 
-    ![](img/zh/override-table.png)
+    ![](img/en/override-detail.png)
 
-    ![](img/zh/override-detail.png)
-
-## 删除云账号
-删除云账号时，会删除所有成本 & 资源数据。
+## Delete account
+All related data will be deleted permanently.

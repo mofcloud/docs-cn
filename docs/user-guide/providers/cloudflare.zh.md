@@ -1,5 +1,6 @@
 目前，Mof 使用 Cloudflare GraphQL 获取 CDN 用量数据，用户需要配置与 Cloudflare 签署的 CDN 价格信息，以便计算账单数据。
 
+后续，我们会支持通过 API 拉取账单数据。
 ---
 
 ## 部分支持
