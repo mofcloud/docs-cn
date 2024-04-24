@@ -51,7 +51,7 @@ Mof use [DescribeInstanceBill](https://www.alibabacloud.com/help/en) API to pull
               "Effect": "Allow",
               "Action": [
                 "resourcecenter:Get*",
-                "resourcecenter:List*",
+                "resourcecenter:List*"
               ],
               "Resource": "*"
             }

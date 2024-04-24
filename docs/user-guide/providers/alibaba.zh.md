@@ -51,7 +51,7 @@ Mof 使用阿里云账单 API [DescribeInstanceBill](https://help.aliyun.com/doc
               "Effect": "Allow",
               "Action": [
                 "resourcecenter:Get*",
-                "resourcecenter:List*",
+                "resourcecenter:List*"
               ],
               "Resource": "*"
             }
