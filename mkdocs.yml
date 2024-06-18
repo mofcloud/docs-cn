@@ -37,13 +37,13 @@ plugins:
             AWS: AWS
             Azure: Azure
             Google Cloud: GCP
-            AlibabaCloud: 阿里云
-            HuaweiCloud: 华为云
-            TencentCloud: 腾讯云
+            Alibaba: 阿里云
+            Huawei: 华为云
+            Tencent: 腾讯云
             UCloud: UCloud
-            BaiduCloud: 百度云
+            Baidu: 百度云
             Cloudflare: Cloudflare
-            BaishanCloud: 白山云
+            Baishan: 白山云
             Agora: 声网
             NetEaseYidun: 网易易盾
             NetEaseYunxin: 网易云信
@@ -95,7 +95,6 @@ nav:
   - "User guide":
       - "Smart bill":
           - "Smart monthly bill": "user-guide/bills/smart.md"
-          - "Monthly bill": "user-guide/bills/monthly.md"
           - "Bill history": "user-guide/bills/history.md"
           - "Download bill": "user-guide/bills/download.md"
           - "Server analysis": "user-guide/bills/server.md"
