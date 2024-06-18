@@ -30,6 +30,9 @@
                             "cur:DescribeReportDefinitions",
                             "s3:ListBucket",
                             "s3:GetObject",
+                            "tag:GetResources",
+                            "tag:TagResources",
+                            "tag:UntagResources"
                         ],
                         "Resource": "*"
                     }
@@ -56,9 +59,7 @@ As soon as synchronization finished, **Smart bills** is available for bill analy
     **Bill groups**，**Filter**，**Download bills** are common to all views.
 
     - **Smart**
-        - Abnormal, groups, resource bills, bill detail, mofis analysis
-    - **Monthly**
-        - Monthly bill, bill prediction
+        - Abnormal, groups, daily charts, resource bills, bill detail, mofis analysis
     - **History**
         - Bill history, Mofis analysis
     - **Server Analysis**
@@ -67,25 +68,30 @@ As soon as synchronization finished, **Smart bills** is available for bill analy
 ### Smart
 !!! example "Target bill abnormal and root cause"
     1. Target abnormal **Unit** via **Abnormal chart** & **Mofis analysis**  
-    2. Target abnormal **resource** via **resource bill**
-    3. Target **root cause** via **resource usage**
+    2. Target estimation **Unit** via **Group chart**
+    3. Target daily expense **Unit** via **Daily chart**
+    4. Target abnormal **resource** via **resource bill**
+    5. Target **root cause** via **resource usage**
 
-=== "Bill abnormal"
+=== "Abnormal Chart"
 
     ![Image title](img/en/smart-bill-1.png)
 
-=== "Resource bill"
+=== "Group Chart"
 
     ![Image title](img/en/smart-bill-2.png)
 
-=== "Resource usage"
+=== "Daily Chart"
 
     ![Image title](img/en/smart-bill-3.png)
 
-### Monthly
-Traditional monthly bill view & estimation.
+=== "Resource bill"
 
-![Image title](img/en/monthly-bill.png)
+    ![Image title](img/en/smart-bill-4.png)
+
+=== "Resource usage"
+
+    ![Image title](img/en/smart-bill-5.png)
 
 ### History
 ![Image title](img/en/bill-trend.png)

@@ -17,16 +17,15 @@
                 "Statement": [
                     {
                         "Action": [
-                            "rms:*:list",
-                            "rms:*:get",
-                            "rms:*:getStatus",
                             "bss:bill:view",
-                            "vpc:vpcs:list",
-                            "vpc:subnets:get",
-                            "evs:volumes:list",
-                            "rds:instance:list",
-                            "ecs:cloudServers:list",
-                            "ces:metricData:list"
+                            "ces:*:list*",
+                            "ces:*:get*"
+                            "rms:*:list*",
+                            "rms:*:get*",
+                            "ce:*:list",
+                            "tms:*:update",
+                            "tms:*:delete",
+                            "tms:*:create",
                         ],
                         "Effect": "Allow"
                     }
@@ -52,9 +51,7 @@
     **账单分类**，**账单条件过滤**，**下载账单为**通用功能。
 
     - **智能月账单**
-        - 异动图，分类账单详情，资源账单详情，Mofis 智能分析
-    - **月账单**
-        - 月账单分类图，账单预估
+        - 异动图，分类图，日线图，分类账单详情，资源账单详情，Mofis 智能分析
     - **历史账单**
         - 账单趋势图，Mofis 智能分析
     - **服务器分析**
@@ -63,25 +60,31 @@
 ### 智能月账单
 !!! example "快速定位账单异动 & 异动原因"
     1. 通过**异动图** & **Mofis 分析报告**定位账单异动**单元**
-    2. 通过**资源账单**定位异动**资源**
-    3. 通过**资源用量**定位异动**原因**
+    2. 通过**分类图** 定位分类账单月末预估
+    3. 通过**日线图** 定位分类账单按日趋势
+    4. 通过**资源账单**定位异动**资源**
+    5. 通过**资源用量**定位异动**原因**
 
-=== "账单异动"
+=== "异动图"
 
     ![Image title](img/zh/smart-bill-1.png)
 
-=== "资源账单"
+=== "分类图"
 
     ![Image title](img/zh/smart-bill-2.png)
 
-=== "资源用量"
+=== "日线图"
 
     ![Image title](img/zh/smart-bill-3.png)
 
-### 月账单
-月账单提供传统视图 & 月末预估金额
+=== "资源账单"
 
-![Image title](img/zh/monthly-bill.png)
+    ![Image title](img/zh/smart-bill-4.png)
+
+=== "资源用量"
+
+    ![Image title](img/zh/smart-bill-5.png)
+
 
 ### 历史账单
 ![Image title](img/zh/bill-trend.png)
