@@ -61,6 +61,7 @@ plugins:
             Sync: 数据同步
             Exchange Rate: 汇率中心
             User: 用户设置
+            Tag editor: 标签管理
 
 markdown_extensions:
   - attr_list
@@ -101,6 +102,7 @@ nav:
           - "Server analysis": "user-guide/bills/server.md"
       - "Organization": "user-guide/org/index.md"
       - "Sync": "user-guide/sync/index.md"
+      - "Tag editor": "user-guide/tagging/index.md"
       - "Exchange Rate": "user-guide/exchange/index.md"
       - "User": "user-guide/user/index.md"
       - "Providers":
