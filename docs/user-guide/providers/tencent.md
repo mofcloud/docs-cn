@@ -64,6 +64,15 @@ Mof use [DescribeBillDetail](https://www.tencentcloud.com/document/api/555/30756
               "resource": [
                 "*"
               ]
+            },
+            {
+              "action": [
+                "tag:*",
+              ],
+              "effect": "allow",
+              "resource": [
+                "*"
+              ]
             }
           ],
           "version": "2.0"

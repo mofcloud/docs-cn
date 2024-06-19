@@ -60,7 +60,8 @@ Mof use [ResourceBillList](https://cloud.baidu.com/doc/Finance/s/cjxedqyml) API 
               ],
               "effect": "Allow",
               "permission": [
-                "VM_READ"
+                "VM_READ",
+                "VM_OPERATE"
               ],
               "eid": "bcc_vm_read"
             },

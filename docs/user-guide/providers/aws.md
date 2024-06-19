@@ -53,6 +53,9 @@ The cost of Cost Explorer is expensive.
                         "s3:ListBucket",
                         "s3:GetObject",
                         "cloudwatch:GetMetricData"
+                        "tag:GetResources",
+                        "tag:TagResources",
+                        "tag:UntagResources"
                     ],
                     "Resource": "*"
                 }

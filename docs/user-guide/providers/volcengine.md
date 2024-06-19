@@ -1,4 +1,4 @@
-Mof use [DescribeInstanceBill](https://www.alibabacloud.com/help/en) API to pull billing data.
+Mof use [ListBillDetail](https://www.volcengine.com/docs/6269/1127842) API to pull billing data.
 
 ---
 
@@ -12,11 +12,11 @@ Mof use [DescribeInstanceBill](https://www.alibabacloud.com/help/en) API to pull
         Please select your locale based on account belongs to.
 
         - [x] China
-        - [x] Global
+        - [ ] Global
 
 === "3.AK/SK"
     !!! example "Explanation"
-        Please refer to official docs of [AK/SK](https://www.alibabacloud.com/help/en/cloud-migration-guide-for-beginners/latest/obtain-an-accesskey-pair?spm=a3c0i.23458820.2359477120.252.f0237d3f5WFa9F)
+        Please refer to official docs of [AK/SK](https://www.volcengine.com/docs/6257/64983)
         Mof needs **read only** permission.
 
         ![](img/en/aksk-cred.png)
@@ -27,51 +27,23 @@ Mof use [DescribeInstanceBill](https://www.alibabacloud.com/help/en) API to pull
 
         ```json
         {
-          "Version": "1",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Action": "bssapi:DescribeInstanceBill",
-              "Resource": "*"
-            },
-            {
-              "Effect": "Allow",
-              "Action": [
-                "ram:ListPoliciesForUser",
-                "ram:GetPolicy"
-              ],
-              "Resource": "*"
-            },
-            {
-              "Effect": "Allow",
-              "Action": "cms:QueryMetricList",
-              "Resource": "*"
-            },
-            {
-              "Effect": "Allow",
-              "Action": [
-                "resourcecenter:Get*",
-                "resourcecenter:List*"
-              ],
-              "Resource": "*"
-            },
-            {
-              "Effect": "Allow",
-              "Action": [
-                "resourcemanager:List*",
-              ],
-              "Resource": "*"
-            },
-            {
-              "Effect": "Allow",
-              "Action": [
-                "tag:Untag*",
-                "tag:Tag*",
-                "tag:List*"
-              ],
-              "Resource": "*"
-            },
-          ]
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "billing:ListBill*",
+                        "billing:QueryBalanceAcct",
+                        "tag:GetTagKeys",
+                        "tag:GetResources",
+                        "ecs:DescribeInstances",
+                        "Volc_Observe:GetMetricData",
+                        "resourcecenter:Search*"
+                    ],
+                    "Resource": [
+                        "*"
+                    ]
+                }
+            ]
         }
         ```
 
@@ -106,7 +78,7 @@ Mof use [DescribeInstanceBill](https://www.alibabacloud.com/help/en) API to pull
 
 ## Discount list
 !!! example "Explanation"
-    In some case, if bills from cloud account does not contain special discount, user can apply discount on bill data.
+In some case, if bills from cloud account does not contain special discount, user can apply discount on bill data.
 
     ![](img/en/discount.png)
 

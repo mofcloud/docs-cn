@@ -12,7 +12,7 @@ Mof 使用腾讯云账单 API [DescribeBillDetail](https://cloud.tencent.com/doc
         请跟据账号归属，选择相应的地域。**可修改**
 
         - [x] 中国站
-        - [ ] 全球站
+        - [x] 全球站
 
 === "3.访问密钥"
     !!! example "解释"
@@ -30,7 +30,8 @@ Mof 使用腾讯云账单 API [DescribeBillDetail](https://cloud.tencent.com/doc
           "statement": [
             {
               "action": [
-                "finance:DescribeBillDetail"
+                "finance:DescribeBillDetail",
+                "finance:DescribeAccountBalance*"
               ],
               "effect": "allow",
               "resource": [
@@ -59,6 +60,15 @@ Mof 使用腾讯云账单 API [DescribeBillDetail](https://cloud.tencent.com/doc
               "action": [
                 "cam:GetPolicy",
                 "cam:ListPoliciesGrantingServiceAccess"
+              ],
+              "effect": "allow",
+              "resource": [
+                "*"
+              ]
+            },
+            {
+              "action": [
+                "tag:*",
               ],
               "effect": "allow",
               "resource": [

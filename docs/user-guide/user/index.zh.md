@@ -10,6 +10,15 @@
 ## 修改密码
 ![img](img/zh/reset-pass.png)
 
+## 查看支付记录
+![img](img/zh/bill.png)
+
+## 订阅付费版
+![img](img/zh/subscribe.png)
+
+## 注销账号
+![img](img/zh/unregister.png)
+
 ## 货币设置
 通过设置货币种类，Mof 会自动使用实时汇率，把其他币种结算成当前货币。
 

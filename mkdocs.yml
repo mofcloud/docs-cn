@@ -45,6 +45,7 @@ plugins:
             Cloudflare: Cloudflare
             Baishan: 白山云
             Agora: 声网
+            Volcengine: 火山引擎
             NetEaseYidun: 网易易盾
             NetEaseYunxin: 网易云信
             ECloudValley(enterprise): ECloudValley(私有版)
@@ -109,6 +110,7 @@ nav:
           - "Alibaba": "user-guide/providers/alibaba.md"
           - "Huawei": "user-guide/providers/huawei.md"
           - "Tencent": "user-guide/providers/tencent.md"
+          - "Volcengine": "user-guide/providers/volcengine.md"
           - "UCloud": "user-guide/providers/ucloud.md"
           - "Baidu": "user-guide/providers/baidu.md"
           - "Cloudflare": "user-guide/providers/cloudflare.md"

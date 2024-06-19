@@ -37,7 +37,10 @@ Mof use [ListCustomerselfResourceRecords](https://support.huaweicloud.com/api-oc
                 "vpc:subnets:get",
                 "rms:*:list",
                 "rms:*:get",
-                "ces:metricData:list"
+                "ces:metricData:list",                
+                "tms:*:update",
+                "tms:*:delete",
+                "tms:*:create"
               ]
             }
           ]

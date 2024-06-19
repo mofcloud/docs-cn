@@ -37,7 +37,10 @@ Mof 使用华为云账单 API [ListCustomerselfResourceRecords](https://support.
                 "vpc:subnets:get",
                 "rms:*:list",
                 "rms:*:get",
-                "ces:metricData:list"
+                "ces:metricData:list",
+                "tms:*:update",
+                "tms:*:delete",
+                "tms:*:create"
               ]
             }
           ]

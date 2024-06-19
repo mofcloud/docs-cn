@@ -10,6 +10,15 @@ Following information can be updated.
 ## Reset password
 ![img](img/en/reset-pass.png)
 
+## Billing history
+![img](img/zh/bill.png)
+
+## Subscription
+![img](img/zh/subscribe.png)
+
+## Delete user
+![img](img/zh/unregister.png)
+
 ## Currency settings
 Mof will automatically exchange bills with currency configured by user.
 

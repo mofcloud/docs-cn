@@ -53,6 +53,9 @@ Cost Explorer 根据请求数收费，如果频繁访问，成本高。
                         "s3:ListBucket",
                         "s3:GetObject",
                         "cloudwatch:GetMetricData"
+                        "tag:GetResources",
+                        "tag:TagResources",
+                        "tag:UntagResources"
                     ],
                     "Resource": "*"
                 }

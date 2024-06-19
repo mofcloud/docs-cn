@@ -1,4 +1,4 @@
-Mof 使用百度云账单 API [ResourceBillList](https://cloud.baidu.com/doc/Finance/s/cjxedqyml) 获取账单数据。
+Mof 使用火山引擎账单 API [ListBillDetail](https://www.volcengine.com/docs/6269/1127842) 获取账单数据。
 
 ---
 
@@ -16,7 +16,7 @@ Mof 使用百度云账单 API [ResourceBillList](https://cloud.baidu.com/doc/Fin
 
 === "3.访问密钥"
     !!! example "解释"
-        请参考官方文档获取[访问密钥](https://cloud.baidu.com/doc/IAM/s/njwvyc2zd)
+        请参考官方文档获取[访问密钥](https://www.volcengine.com/docs/6257/64983)
         Mof 只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。
 
         ![](img/zh/aksk-cred.png)
@@ -27,70 +27,23 @@ Mof 使用百度云账单 API [ResourceBillList](https://cloud.baidu.com/doc/Fin
 
         ```json
         {
-          "id": "policy_8867055700254b158bb6fea8093ed5d3",
-          "version": "v1",
-          "accessControlList": [
-            {
-              "service": "bce:billing",
-              "region": "*",
-              "resource": [
-                "*"
-              ],
-              "effect": "Allow",
-              "permission": [
-                "READ"
-              ]
-            },
-            {
-              "service": "bce:iam",
-              "region": "*",
-              "resource": [
-                "*"
-              ],
-              "effect": "Allow",
-              "permission": [
-                "READ"
-              ]
-            },
-            {
-              "service": "bce:bcc",
-              "region": "*",
-              "resource": [
-                "*"
-              ],
-              "effect": "Allow",
-              "permission": [
-                "VM_READ",
-                "VM_OPERATE"
-              ],
-              "eid": "bcc_vm_read"
-            },
-            {
-              "service": "bce:bcc",
-              "region": "*",
-              "resource": [
-                "*"
-              ],
-              "effect": "Allow",
-              "permission": [
-                "SNAPSHOT_READ",
-                "SECURITYGROUP_READ",
-                "IMAGE_READ"
-              ],
-              "eid": "bcc_read"
-            },
-            {
-              "service": "bce:bcm",
-              "region": "*",
-              "resource": [
-                "*"
-              ],
-              "effect": "Allow",
-              "permission": [
-                "READ"
-              ]
-            }
-          ]
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "billing:ListBill*",
+                        "billing:QueryBalanceAcct",
+                        "tag:GetTagKeys",
+                        "tag:GetResources",
+                        "ecs:DescribeInstances",
+                        "Volc_Observe:GetMetricData",
+                        "resourcecenter:Search*"
+                    ],
+                    "Resource": [
+                        "*"
+                    ]
+                }
+            ]
         }
         ```
 
