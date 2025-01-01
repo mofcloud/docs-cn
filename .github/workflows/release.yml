@@ -19,5 +19,5 @@ jobs:
           content: "## 有新镜像 Release\n
           > **代码仓库:** <font color=\"comment\">${{ github.repository }}</font> \n
           > **代码分支:** <font color=\"comment\">${{ github.ref }}</font> \n
-          > **文档地址:** <font color=\"comment\">https://docs.mofcloud.com</font> \n"
+          > **文档地址:** <font color=\"comment\">https://mofcloud.cn/docs</font> \n"
           mentioned_list: '["lark","shengyu"]'

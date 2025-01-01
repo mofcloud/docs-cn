@@ -1,11 +1,13 @@
-site_name: Mof Documentation
-site_url: https://docs.mofcloud.com
+site_name: Mof 文档
+site_url: https://mofcloud.cn/docs
 repo_name: mofcloud/docs
 repo_url: https://github.com/mofcloud/docs
 
 theme:
   name: material
-  language: en
+  language: zh
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   features:
     - navigation.tracking
     - navigation.top
@@ -18,13 +20,10 @@ plugins:
   - i18n:
       default_language: c
       languages:
-        - locale: en
-          name: English
-          build: true
-          default: true
         - locale: zh
           name: 简体中文
           build: true
+          default: true
           nav_translations:
             Introduction: 产品介绍
             Getting started: 快速开始
@@ -92,9 +91,28 @@ markdown_extensions:
       custom_checkbox: true
 
 nav:
-  - "Introduction": "index.md"
-  - "Getting started": "getting-started/index.md"
-  - "User guide":
+  - "产品介绍": "index.md"
+  - "快速开始":
+      - "添加云账号": "getting-started/index.md"
+      - "云厂商":
+          - "添加/更新基本信息": "getting-started/providers/basic.md"
+          - "阿里云": "getting-started/providers/alibaba.md"
+          - "腾讯云": "getting-started/providers/tencent.md"
+          - "华为云": "getting-started/providers/huawei.md"
+          - "火山引擎": "getting-started/providers/volcengine.md"
+          - "百度云": "getting-started/providers/baidu.md"
+          - "UCloud": "getting-started/providers/ucloud.md"
+          - "声网": "getting-started/providers/agora.md"
+          - "白山云": "getting-started/providers/baishan.md"
+          - "网易云信": "getting-started/providers/yunxin.md"
+          - "AWS": "getting-started/providers/aws.md"
+          - "Azure": "getting-started/providers/azure.md"
+          - "GCP": "getting-started/providers/gcp.md"
+          - "Oracle": "getting-started/providers/oci.md"
+          - "手动输入": "getting-started/providers/manual.md"
+      - "数据同步": "getting-started/sync.md"
+      - "用户设置": "getting-started/user-setting.md"
+  - "用户指南":
       - "Smart bill":
           - "Smart monthly bill": "user-guide/bills/smart.md"
           - "Bill history": "user-guide/bills/history.md"
@@ -105,28 +123,12 @@ nav:
       - "Tag editor": "user-guide/tagging/index.md"
       - "Exchange Rate": "user-guide/exchange/index.md"
       - "User": "user-guide/user/index.md"
-      - "Providers":
-          - "AWS": "user-guide/providers/aws.md"
-          - "Azure": "user-guide/providers/azure.md"
-          - "GCP": "user-guide/providers/gcp.md"
-          - "Alibaba": "user-guide/providers/alibaba.md"
-          - "Huawei": "user-guide/providers/huawei.md"
-          - "Tencent": "user-guide/providers/tencent.md"
-          - "Volcengine": "user-guide/providers/volcengine.md"
-          - "UCloud": "user-guide/providers/ucloud.md"
-          - "Baidu": "user-guide/providers/baidu.md"
-          - "Cloudflare": "user-guide/providers/cloudflare.md"
-          - "Baishan": "user-guide/providers/baishan.md"
-          - "Agora": "user-guide/providers/agora.md"
-          - "NetEaseYidun": "user-guide/providers/yidun.md"
-          - "NetEaseYunxin": "user-guide/providers/yunxin.md"
-          - "Customs": "user-guide/providers/custom.md"
-  - "Cloud Wiki": "cloud-wiki/index.md"
-  - "FinOps Wiki": "finops-wiki/index.md"
-  - "Best practice": "best-practice/index.md"
   - "Contact": "contact/index.md"
 
 extra_css:
   - stylesheets/extra.css
+
+extra:
+  homepage: https://mofcloud.cn
 
 copyright: Copyright &copy; 2024 mofcloud

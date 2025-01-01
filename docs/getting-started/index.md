@@ -1,127 +1,33 @@
-## Add Cloud Account
-=== "1: Choose Cloud"
-    ![](img/en/add-account-to-choose.png)
+---
+title: 添加云账号
+description: 快速配置您的第一个云厂商，并并开始分析云成本健康状态。 
+---
 
-=== "2: Account info"
+系统目前支持 10+ 流行的海内外云厂商，后续会持续添加新的云厂商，包括 IAAS，PAAS，SAAS。你可以联系我们添加您需要的云厂商。
 
-    !!! info "Steps"
-        - Choose **Cloud Accounts** -> **Add Cloud Account** -> **AWS**
+## 选择云厂商
+选择 **云账号** -> **添加云账号** -> **<您的云厂商类型>**
 
-        - Fill forms
-            - **Basic info**：For represent, username could be duplicated
-            - **Locale**：If currency of AWS is unknown, currency of global(USD), china(CNY) would be used for billing data
-            - **AK/Sk**：Refer to [official docs](https://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) to get credentials，permissions as bellow:
-            ``` json
-            {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Sid": "VisualEditor0",
-                        "Effect": "Allow",
-                        "Action": [
-                            "sts:GetCallerIdentity",
-                            "iam:ListAttachedUserPolicies",
-                            "iam:GetPolicy",
-                            "iam:GetPolicyVersion",
-                            "ce:GetCostAndUsage",
-                            "ce:GetDimensionValues",
-                            "ce:GetTags",
-                            "ec2:Describe*",
-                            "cur:DescribeReportDefinitions",
-                            "s3:ListBucket",
-                            "s3:GetObject",
-                            "tag:GetResources",
-                            "tag:TagResources",
-                            "tag:UntagResources"
-                        ],
-                        "Resource": "*"
-                    }
-                ]
-            }
-            ```
-            - **Default group by**：All billing data will be collected with all groups, it's used while grouping all cloud accounts data.
-            - **Bill report name**: Optional. Resource level bills will be available if provided. [Official docs for enabling bill report on AWS](https://docs.aws.amazon.com/zh_cn/cur/latest/userguide/cur-create.html). 
-        ![Image title](img/en/add-account-to-fill.png)
+![选择云厂商](assets/choose.png)
 
-=== "3: Sync Data"
+## 设置账号权限
+请根据**图文指引**完成对云账号的授权。**权限表**列出了系统所需要的权限信息，以及权限格式。
 
-    !!! info "Check synchronization"
-        As soon as account added, system will start to collect data immediately. 
+![设置权限](assets/set-policy.png)
 
-        At first time, system will collect 3 months bill data and resource data.
-    
-        ![Image title](img/en/sync-data.png)
+## 填写账号信息
+每一个云厂商有不同的信息需要填写，请参考云厂商。
 
-## Smart bills
-As soon as synchronization finished, **Smart bills** is available for bill analysis.
+!!! info "基本选项"
+    - **基本信息**：账号名称用于展示，可以重名，建议使用不同的名称
+    - **地域**：如果云的结算货币未知，系统会使用地域确定货币种类，目前支持全球（美元），中国（人民币）
+    - **默认统计维度**：系统收集所有纬度的数据，默认纬度用于统计所有云厂商的成本，不影响数据准确性
 
-!!! info "功能"
-    **Bill groups**，**Filter**，**Download bills** are common to all views.
+![填写密钥信息](assets/fill.png)
 
-    - **Smart**
-        - Abnormal, groups, daily charts, resource bills, bill detail, mofis analysis
-    - **History**
-        - Bill history, Mofis analysis
-    - **Server Analysis**
-        - Utilization, bills, configurations, monitoring data, Mofis analysis
+## 开始同步数据
+云账号添加成功之后，系统会自动开始收集数据，可以在**数据同步**中查看。
 
-### Smart
-!!! example "Target bill abnormal and root cause"
-    1. Target abnormal **Unit** via **Abnormal chart** & **Mofis analysis**  
-    2. Target estimation **Unit** via **Group chart**
-    3. Target daily expense **Unit** via **Daily chart**
-    4. Target abnormal **resource** via **resource bill**
-    5. Target **root cause** via **resource usage**
+系统默认同步前**3个月**的数据，用户可以自行同步其他时间段的数据。
 
-=== "Abnormal Chart"
-
-    ![Image title](img/en/smart-bill-1.png)
-
-=== "Group Chart"
-
-    ![Image title](img/en/smart-bill-2.png)
-
-=== "Daily Chart"
-
-    ![Image title](img/en/smart-bill-3.png)
-
-=== "Resource bill"
-
-    ![Image title](img/en/smart-bill-4.png)
-
-=== "Resource usage"
-
-    ![Image title](img/en/smart-bill-5.png)
-
-### History
-![Image title](img/en/bill-trend.png)
-
-## Download bills
-![Image title](img/en/download-bill.png)
-
-![Image title](img/en/download-bill-excel.png)
-
-## Server analysis
-!!! example "Determine【Unused】&【Low util】"
-    1. Determine【Unused】&【Low util】servers via **Overview**
-    2. Check **Low util** via**Metrics**
-    3. Check historical reasons via **Bill**
-    4. View **configurations** via *Attributes*
-
-=== "Overview"
-
-    ![Image title](img/en/server-1.png)
-
-=== "Metrics"
-
-    ![Image title](img/en/server-2.png)
-
-=== "Bill"
-
-    ![Image title](img/en/server-4.png)
-
-=== "Attributes"
-
-    ![Image title](img/en/server-3.png)
-
-
+![开始同步数据](assets/sync.png)
