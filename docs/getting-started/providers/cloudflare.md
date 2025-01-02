@@ -1,96 +1,73 @@
-Mof is using Cloudflare GraphQL to pull CDN usage data，user needs to provide CDN price in order to calc final bill amount.
+---
+title: Cloudflare
+description: 快速配置 Cloudflare，并开始分析云成本健康状态。 
+---
+
+系统使用 Cloudflare GraphQL 获取 CDN 用量数据，用户需要配置与 Cloudflare 签署的 CDN 价格信息，以便计算账单数据。
+
+后续，我们会支持通过 API 拉取账单数据。
 
 ---
 
-## Partial support
-> Cloudflare only support **CDN** cost analysis
+## 部分支持
+Cloudflare 目前只支持 **CDN** 成本分析。
 
-## Add account
-=== "1.Basic info"
-    !!! example "Explanation"
-        For represent, username could be duplicated
+## 添加账号
+### **基本信息**
+请参考 [基本信息](basic.md)配置。
 
-=== "2.Locale"
-    !!! example "Explanation"
-        Please select your locale based on account belongs to.
 
-        - [ ] China
-        - [x] Global
+### **地域**
+请跟据账号归属，选择相应的地域。**可修改**
 
-=== "3.Credential"
-    !!! example "Explanation"
-        Please refer to [Officia docs](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)
+- [ ] 中国站
+- [x] 全球站
 
-        ![](img/en/cloudflare-cred.png)
+### **访问密钥**
+请参考官方文档获取[访问密钥](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)
 
-=== "4.Permission"
-    !!! example "解释"
-        Please grant read permission to Mof
+账单数据，不会采取任何**写操作**，请放心使用。
 
-        ![](img/en/cloudflare-policy.png)
 
-=== "5.Default group by"
-    !!! example "Explanation"
-        All billing data will be collected with all groups, it's used while grouping all cloud accounts data.
+### **拓展信息**
+如果填写了保底流量 & 保底费用，Mof 会首先判断用量是否在保底区域内，如果溢出，会使用 CDN 单价计算成本。
 
-=== "6.Extension"
-    !!! example "Explanation"
-        
-        | 选项            | 使用场景                                  |
-        |---------------|---------------------------------------|
-        | CDN Price(USD/GB) | If base amount and base traffic were filled, that system will use this price to calc extra bill amount |
-        | CDN base traffic(GB)   | Optional, fill 0 if there is no base traffic  |
-        | CDN base Amount(USD)   | Optional, fill 0 if there is no base amount  |
-        | Price start        | Start time of price                                |
-        | Price end        | End time of price                                |
+如果没有填写保底流量 & 保底费用，Mof 会使用 CDN 单价计算成本。
 
-## Update cloud account
-=== "1.Basic info"
-    !!! example "Explanation"
-        Modifiable.
+| 选项            | 使用场景                                  |
+|---------------|---------------------------------------|
+| CDN 单价(美元/GB) | CDN 流量单价，如果填写了保底流量 & 保底单价，此价格将会是溢出单价。 |
+| CDN保底流量(GB)   | 如果与 Cloudflare 签署了保底，请填写保底流量，否则填写 0。  |
+| CDN保底费用(美元)   | 如果与 Cloudflare 签署了保底，请填写保底费用，否则填写 0。  |
+| 价格开始月份        | 合约开始日期                                |
+| 价格结束月份        | 合约结束日期                                |
 
-=== "2.Extension"
-    !!! example "Explanation"
-        Modifiable. Once updated, Mof will sync from new bill report.
+## 更新账号
+请参考 [基本信息](basic.md)更新。
 
-=== "3.Credential"
-    !!! example "Explanation"
-        Unmodifiable.
+### **扩展信息**
+可修改。
 
-## Auto sync
-!!! example "Explanation"
-    Mof will run cron job based on configuration
+## 功能支持
 
-    ![](img/en/cron.png)
-
-## Tag management
-!!! example "Explanation"
-    Mof will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
-
-    ![](img/en/tag.png)
-
-## Discount list
-!!! example "Explanation"
-    In some case, if bills from cloud account does not contain special discount, user can apply discount on bill data.
-
-    ![](img/en/discount.png)
-
-## Lock Account and Bills
-!!! example "Explanation"
-    There are two types of locks which can lead to no updates on bills while syncing data.
-
-    - **Account lock**：Not pulling billing data anymore
-    - **Bill lock**：Not pulling billing data on specific month
-
-    ![](img/en/lock.png)
-
-## Billing Data Override
-!!! example "Explanation"
-    Used to override **payment** data.
-
-    ![](img/en/override-table.png)
-
-    ![](img/en/override-detail.png)
-
-## Delete account
-All related data will be deleted permanently.
+| 功能         | 描述               |
+|------------|------------------|
+| **智能账单**   | 不支持分类            |
+| `成本浏览器`    | :material-check: |
+| `月账单`      | :material-check: |
+| `日账单`      | :material-check: |
+| `历史账单`     | :material-check: |
+| `账单过滤`     | :material-check: |
+| `单元成本浏览器`  | :material-check: |
+| `资源账单`     | :material-check: |
+| `计费项 & 用量` | :material-check: |
+| `Mofis 报告` | :material-check: |
+| `账单下载`     | :material-check: |
+| `定制消息推送`   | :material-check: |
+| `消息通知`     | :material-check: |
+| `汇率转换`     | :material-check: |
+| `服务器分析`    |  |
+| **数据同步**   |                  |
+| `手动同步`     | :material-check: |
+| `自动同步`     | :material-check: |
+| **标签管理**   |  |
