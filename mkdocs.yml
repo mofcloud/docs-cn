@@ -80,7 +80,7 @@ nav:
           - "企业微信": "getting-started/comm/wechat.md"
           - "钉钉": "getting-started/comm/ding.md"
           - "飞书": "getting-started/comm/feishu.md"
-
+  - "部署方式": "deployment/index.md"
 extra_css:
   - stylesheets/extra.css
 
