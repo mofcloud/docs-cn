@@ -1,4 +1,4 @@
-![mof 介绍](getting-started/assets/mof-overview.png)
+![mof 介绍](assets/mof-overview.png)
 
 Mof 是一款 **云降本增效平台**，基于 FinOps 框架打造，帮助用户分析，管理，优化云开销和云技术架构。
 

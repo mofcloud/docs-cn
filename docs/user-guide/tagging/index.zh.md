@@ -2,7 +2,7 @@
 
 Mof 提供的标签管理功能，会把用户的标签信息，同步到云商场。用户需要相应的密钥权限。请参考**云厂商**页面文档页面。
 
-![](img/zh/overview.png)
+![](../../getting-started/assets/tag/overview.png)
 
 ## 查看
 === "基本信息"

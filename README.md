@@ -1,5 +1,5 @@
 # docs
-This is the repository which holds the site of https://docs.mofcloud.com
+This is the repository which holds the site of https://mofcloud.cn/docs
 
 ## How to run?
 This site uses mkdocs as framework. User needs to install mkdocs on local development environment.

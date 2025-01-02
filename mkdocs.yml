@@ -1,7 +1,7 @@
 site_name: Mof 文档
 site_url: https://mofcloud.cn/docs
-repo_name: mofcloud/docs
-repo_url: https://github.com/mofcloud/docs
+repo_name: mofcloud/docs-cn
+repo_url: https://github.com/mofcloud/docs-cn
 
 theme:
   name: material
@@ -17,50 +17,6 @@ theme:
 plugins:
   - glightbox
   - search
-  - i18n:
-      default_language: c
-      languages:
-        - locale: zh
-          name: 简体中文
-          build: true
-          default: true
-          nav_translations:
-            Introduction: 产品介绍
-            Getting started: 快速开始
-            User guide: 用户指南
-            Cloud Wiki: 云百科
-            FinOps Wiki: FinOps 百科
-            Best practice: 最佳实践
-            Contact: 联系我们
-            Providers: 云厂商
-            AWS: AWS
-            Azure: Azure
-            Google Cloud: GCP
-            Alibaba: 阿里云
-            Huawei: 华为云
-            Tencent: 腾讯云
-            UCloud: UCloud
-            Baidu: 百度云
-            Cloudflare: Cloudflare
-            Baishan: 白山云
-            Agora: 声网
-            Volcengine: 火山引擎
-            NetEaseYidun: 网易易盾
-            NetEaseYunxin: 网易云信
-            ECloudValley(enterprise): ECloudValley(私有版)
-            MeshCloud(enterprise): 脉时云(私有版)
-            CustomCloud: 自定义云
-            Smart bill: 智能账单
-            Server analysis: 服务器分析
-            Smart monthly bill: 智能月账单
-            Monthly bill: 月账单
-            Bill history: 历史账单
-            Download bill: 下载账单
-            Organization: 组织架构
-            Sync: 数据同步
-            Exchange Rate: 汇率中心
-            User: 用户设置
-            Tag editor: 标签管理
 
 markdown_extensions:
   - attr_list
@@ -94,6 +50,13 @@ nav:
   - "产品介绍": "index.md"
   - "快速开始":
       - "添加云账号": "getting-started/index.md"
+      - "智能账单":
+          - "功能概览": "getting-started/smb/overview.md"
+          - "云账号账单": "getting-started/smb/abill.md"
+      - "数据同步": "getting-started/sync.md"
+      - "汇率中心": "getting-started/exchange.md"
+      - "标签管理": "getting-started/tagging.md"
+      - "用户设置": "getting-started/user-setting.md"
       - "云厂商":
           - "添加/更新基本信息": "getting-started/providers/basic.md"
           - "阿里云": "getting-started/providers/alibaba.md"
@@ -110,20 +73,10 @@ nav:
           - "GCP": "getting-started/providers/gcp.md"
           - "Oracle": "getting-started/providers/oci.md"
           - "手动输入": "getting-started/providers/manual.md"
-      - "数据同步": "getting-started/sync.md"
-      - "用户设置": "getting-started/user-setting.md"
-  - "用户指南":
-      - "Smart bill":
-          - "Smart monthly bill": "user-guide/bills/smart.md"
-          - "Bill history": "user-guide/bills/history.md"
-          - "Download bill": "user-guide/bills/download.md"
-          - "Server analysis": "user-guide/bills/server.md"
-      - "Organization": "user-guide/org/index.md"
-      - "Sync": "user-guide/sync/index.md"
-      - "Tag editor": "user-guide/tagging/index.md"
-      - "Exchange Rate": "user-guide/exchange/index.md"
-      - "User": "user-guide/user/index.md"
-  - "Contact": "contact/index.md"
+      - "即时通讯":
+          - "企业微信": "getting-started/comm/wechat.md"
+          - "钉钉": "getting-started/comm/ding.md"
+          - "飞书": "getting-started/comm/feishu.md"
 
 extra_css:
   - stylesheets/extra.css
@@ -131,4 +84,4 @@ extra_css:
 extra:
   homepage: https://mofcloud.cn
 
-copyright: Copyright &copy; 2024 mofcloud
+copyright: Copyright &copy; 2025 mofcloud
