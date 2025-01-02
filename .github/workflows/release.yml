@@ -15,6 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Build mkdocs
+        run: |
+          docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material build
+
       - name: Build, tag, and push docker image to HuaweiCloud SWR
         env:
           REPOSITORY: docs-cn

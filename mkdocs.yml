@@ -15,7 +15,6 @@ theme:
     - content.code.copy
 
 plugins:
-  - glightbox
   - search
 
 markdown_extensions:
