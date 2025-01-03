@@ -1,6 +1,6 @@
 ---
-title: GCP
-description: 快速配置GCP，并开始分析云成本健康状态。 
+title: Google Cloud
+description: 快速配置 Google Cloud，并开始分析云成本健康状态。 
 ---
 
 系统会通过 service account 读取谷歌云账单相关数据。
