@@ -7,7 +7,7 @@ theme:
   name: material
   language: zh
   logo: assets/logo.svg
-  favicon: assets/favicon.svg
+  favicon: assets/favicon.ico
   features:
     - navigation.tracking
     - navigation.top
@@ -54,6 +54,7 @@ nav:
           - "云账号账单": "getting-started/smb/abill.md"
           - "多云账单": "getting-started/smb/pbill.md"
           - "组合账单": "getting-started/smb/ubill.md"
+      - "成本分摊": "getting-started/showback.md"
       - "数据同步": "getting-started/sync.md"
       - "汇率中心": "getting-started/exchange.md"
       - "标签管理": "getting-started/tagging.md"
