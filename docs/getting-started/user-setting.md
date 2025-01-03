@@ -43,4 +43,4 @@ description: 用户设置选项，包括修改密码、订阅、注销、修改�
 - 账号相关数据
 - 消息订阅相关数据
 
-![修改密码](assets/setting/user-setting-unregister.png)
+![注销账号](assets/setting/user-setting-unregister.png)
