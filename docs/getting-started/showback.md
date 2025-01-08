@@ -15,7 +15,7 @@ description: 创建自定义集合，并把成本分摊到集合中。
 ## 2.选择月份
 每个月的分摊规则都不一样，因为，共享资源类型（比如 K8s）的分摊比例会不一样。
 
-![选择月份](assets/showback/create-unit.png)
+![选择月份](assets/showback/select-month.png)
 
 ## 3.绑定云账号
 选择云账号，并选择分类维度，用户需要把不同的分类分摊到集合/单元中。
