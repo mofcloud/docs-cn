@@ -1,6 +1,6 @@
 ---
-title: 阿里云
-description: 快速配置阿里云，并开始分析云成本健康状态。 
+title: UCloud
+description: 快速配置 UCloud，并开始分析云成本健康状态。 
 ---
 
 系统使用 UCloud 账单 API [ListUBillDetail](https://docs.ucloud.cn/api/ubill-api/list_u_bill_detail) 获取账单数据。
