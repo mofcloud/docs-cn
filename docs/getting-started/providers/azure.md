@@ -41,7 +41,7 @@ az role assignment create --assignee <SERVICE_PRINCIPAL_APP_ID> --role Reader --
 ### **地域**
 请跟据账号归属，选择相应的地域。**可修改**
 
-- [ ] 中国站
+- [x] 中国站
 - [x] 全球站
 
 ### **Credentials**

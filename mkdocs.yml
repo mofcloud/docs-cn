@@ -58,6 +58,9 @@ nav:
       - "数据同步": "getting-started/sync.md"
       - "汇率中心": "getting-started/exchange.md"
       - "标签管理": "getting-started/tagging.md"
+      - "消息订阅": "getting-started/notification.md"
+      - "原始账单导出": "getting-started/export.md"
+      - "访问权限": "getting-started/rbac.md"
       - "用户设置": "getting-started/user-setting.md"
       - "云服务商":
           - "添加/更新基本信息": "getting-started/providers/basic.md"
@@ -74,7 +77,9 @@ nav:
           - "Azure": "getting-started/providers/azure.md"
           - "GCP": "getting-started/providers/gcp.md"
           - "Oracle": "getting-started/providers/oci.md"
+          - "Linode": "getting-started/providers/linode.md"
           - "Cloudflare": "getting-started/providers/cloudflare.md"
+          - "OpenAI": "getting-started/providers/openai.md"
           - "手动输入": "getting-started/providers/manual.md"
       - "即时通讯":
           - "企业微信": "getting-started/comm/wechat.md"
