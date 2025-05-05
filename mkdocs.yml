@@ -59,6 +59,7 @@ nav:
       - "汇率中心": "getting-started/exchange.md"
       - "标签管理": "getting-started/tagging.md"
       - "消息订阅": "getting-started/notification.md"
+      - "数据共享": "getting-started/share.md"
       - "原始账单导出": "getting-started/export.md"
       - "访问权限": "getting-started/rbac.md"
       - "用户设置": "getting-started/user-setting.md"
@@ -85,6 +86,7 @@ nav:
           - "企业微信": "getting-started/comm/wechat.md"
           - "钉钉": "getting-started/comm/ding.md"
           - "飞书": "getting-started/comm/feishu.md"
+          - "邮件": "getting-started/comm/email.md"
   - "部署方式": "deployment/index.md"
 extra_css:
   - stylesheets/extra.css
